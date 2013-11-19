@@ -28,7 +28,26 @@ angular.module('angularjsTApp', [
                 templateUrl: 'views/tut3.html',
                 controller: 'Tut3Ctrl'
             })
-            .otherwise({
+            .when('/tut4', {
+                templateUrl: 'views/tut4.html',
+                controller: 'Tut4Ctrl'
+            })
+            .when('/tut5', {
+                templateUrl: 'views/tut5.html',
+                controller: 'Tut5Ctrl'
+            })
+            .when('/tut6', {
+                templateUrl: 'views/tut6.html',
+                controller: 'Tut6Ctrl'
+            })
+            .when('/tut7/:phoneId', {
+                templateUrl: 'views/tut7.html',
+                controller: 'Tut7Ctrl'
+            })
+            .when('/tut8/:phoneId', {
+                templateUrl: 'views/tut8.html',
+                controller: 'Tut8Ctrl'
+            }).otherwise({
                 redirectTo: '/'
             });
     });
