@@ -79,8 +79,15 @@ mainControllers.controller('Tut7Ctrl', ['$scope', '$routeParams',
     }]);
 
 mainControllers.controller('Tut8Ctrl', ['$scope', '$routeParams', '$http',
-    function($scope, $routeParams, $http) {
-        $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
+    function ($scope, $routeParams, $http) {
+        $http.get('phones/' + $routeParams.phoneId + '.json').success(function (data) {
+            $scope.phone = data;
+        });
+    }]);
+
+mainControllers.controller('Tut9Ctrl', ['$scope', '$routeParams', '$http',
+    function ($scope, $routeParams, $http) {
+        $http.get('phones/' + $routeParams.phoneId + '.json').success(function (data) {
             $scope.phone = data;
         });
     }]);
