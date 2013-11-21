@@ -5,7 +5,8 @@ angular.module('angularjsTApp', [
         'ngResource',
         'ngSanitize',
         'ngRoute',
-        'phonecatFilters'
+        'phonecatFilters',
+        'phonecatServices'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -52,6 +53,18 @@ angular.module('angularjsTApp', [
             .when('/tut9/:phoneId', {
                 templateUrl: 'views/tut9.html',
                 controller: 'Tut9Ctrl'
+            })
+            .when('/tut10/:phoneId', {
+                templateUrl: 'views/tut10.html',
+                controller: 'Tut10Ctrl'
+            })
+            .when('/tut11a', {
+                templateUrl: 'views/tut11a.html',
+                controller: 'Tut11aCtrl'
+            })
+            .when('/tut11b/:phoneId', {
+                templateUrl: 'views/tut11b.html',
+                controller: 'Tut11bCtrl'
             }).otherwise({
                 redirectTo: '/'
             });
